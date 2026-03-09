@@ -1,5 +1,25 @@
 const Product = require('../models/product');
 
+exports.getProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  console.log('🔍 Looking for product with ID:', prodId);  // ← ADD THIS
+  
+  Product.findbyId(prodId, product => {
+    console.log('📦 Found product:', product);  // ← ADD THIS
+    
+    if (product) {
+      res.render('shop/product-detail', {
+        product: product,
+        pageTitle: product.title,
+        path: '/products',
+      });
+    } else {
+      console.log('❌ Product not found!');
+      res.redirect('/products');
+    }
+  });
+};
+
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('shop/product-list', {

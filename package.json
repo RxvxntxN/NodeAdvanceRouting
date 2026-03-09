@@ -1,15 +1,14 @@
 {
-  "name": "nodejs-complete-guide",
+  "name": "musabbir-trying-learn-nodejs",
   "version": "1.0.0",
-  "description": "Complete Node.js Guide",
+  "description": "Trying to learn Node.js",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
-  "license": "ISC",
+  "student": "Muahammad Musabbir",
   "devDependencies": {
     "nodemon": "^1.18.3"
   },
