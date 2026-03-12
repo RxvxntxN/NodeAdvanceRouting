@@ -57,6 +57,16 @@ form {
   color: #ffeb3b;
 }
 
+.centered img {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 .mobile-nav {
   width: 30rem;
   height: 100vh;
